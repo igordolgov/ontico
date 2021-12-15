@@ -76,9 +76,9 @@
       </div>
 
       <div class="footer" id="contacts">
-        <div class="container">
+        <!-- <div class="container"> -->
           <AppFooter />
-        </div>
+        <!-- </div> -->
       </div>
     </main>
   </div>
@@ -120,4 +120,266 @@ export default {
 </script>
 
 <style scoped>
+.board {
+    padding: 1px;
+    text-align: center;
+}
+
+.board__title {
+    font-size: 3.75em;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.board__alt-title {
+    margin: 0 0 0.6em;
+    padding: 0;
+    color: #C1C1C1;
+    font-size: 1.88em;
+    font-weight: normal;
+}
+
+.board__sub-title {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 16.3em;
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #1A1A1A;
+}
+
+.login__link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition: opacity 0.3s ease;
+}
+
+.login__link:hover {
+    opacity: 0.8;
+}
+
+.login__icon {
+    width: 27px;
+    height: 27px;
+}
+
+.login__text {
+    margin-left: 6px;
+    color: #010000;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.4px;
+}
+
+.rescheduled {
+    text-align: center;
+    margin: 20px 0 130px 0;
+}
+
+.rescheduled__link {
+    padding: 15px 50px;
+    margin: 0 24px;
+    display: inline-block;
+    color: #fff;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    background-color: red;
+    border-radius: 34px;
+    transition: opacity 0.3s ease;
+}
+
+.rescheduled__link:hover {
+    color: #fff;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+@media (max-width: 1000px) {
+    .rescheduled__link {
+        font-size: 24px;
+        padding: 15px 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .board__title {
+        font-size: 3em;
+    }
+    .rescheduled {
+        margin-bottom: 24px;
+    }
+    .rescheduled__link {
+        font-size: 18px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .board__title {
+        font-size: 2.5em;
+    }
+    .rescheduled__link {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+.download {
+    margin: 20px 0 20px;
+}
+
+.download__link {
+    font-size: 1.65em;
+}
+
+.calendar__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    margin-bottom: 230px;
+}
+
+.calendar__item-inner {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    padding: 25px 30px 50px;
+}
+
+.calendar__item-inner:hover {
+    box-shadow: 0 4px 15px rgba(13, 13, 13, 0.5);
+    transition: transform .5s linear;
+}
+
+.calendar__item-date {
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+
+.calendar__item-logo {
+    height: 100px;
+    margin-bottom: 15px;
+    width: 50%;
+    object-fit: contain;
+}
+
+.calendar__item-information {
+    cursor: default;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.calendar__item-title {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    margin-bottom: 15px;
+    /* min-height: 90px; */
+}
+
+.calendar__item-text {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 20px;
+}
+
+.calendar__item-adress {
+    display: block;
+    font-size: 0.875rem;
+    line-height: 17px;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.calendar__item-link {
+    display: block;
+    font-size: 0.875rem;
+    line-height: 17px;
+    margin-bottom: 35px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.calendar__item-link:hover {
+    text-decoration: underline;
+}
+
+.calendar__item-adress::before {
+    background-image: url('/assets/adress-icon.svg');
+    content: "";
+    height: 18px;
+    left: 0;
+    position: absolute;
+    top: -5px;
+    width: 13px;
+}
+
+.calendar__item-link::before {
+    background-image: url('/assets/link-icon.svg');
+    content: "";
+    height: 13px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 13px;
+}
+
+.calendar__item-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calendar__item-purchase {
+    background-color: #6B46D4;
+    color: #fff;
+    font-size: 1.125rem;
+    line-height: 22px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.calendar__item-purchase:hover {
+    background-color: #3D12B7;
+    color: #fff;
+    transition: transform .3s linear;
+}
+
+.calendar__item-more {
+    color: #6B46D4;
+    line-height: 22px;
+    font-size: 18px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.calendar__item-more:hover {
+    color: #3D12B7;
+    text-decoration: underline;
+}
+
+@media (max-width: 720px) {
+    .calendar__items {
+        gap: 24px;
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 420px) {
+    .calendar__item-inner {
+        font-size: 70%;
+        padding: 25px 20px 50px;
+    }
+}
 </style>

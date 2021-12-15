@@ -1,32 +1,35 @@
 <template>
 	<footer class="footer">
-		<div class="footer__information">
-			<div class="footer__contacts">
-				<div class="footer__title">По любым вопросам обращайтесь:</div>
+		<div class="container">
+			<div class="footer__information">
+				<div class="footer__contacts">
+					<div class="footer__title">По любым вопросам обращайтесь:</div>
 
-				<div class="footer__elem">
-					<span class="footer__title">Бухгалтерия и вопросы оплаты :</span>
-					<a href="mailto:support@ontico.ru">support@ontico.ru</a> +7(495)646-07-68,
-					<a href="https://t.me/ontico_support">@ontico_support</a>
-				</div>
+					<div class="footer__elem">
+						<span class="footer__title">Бухгалтерия и вопросы оплаты :</span>
+						<a href="mailto:support@ontico.ru">support@ontico.ru</a> +7(495)646-07-68,
+						<a href="https://t.me/ontico_support">@ontico_support</a>
+					</div>
 
-				<div class="footer__elem">
-					<span class="footer__title">Программный комитет :</span>
-					<a href="mailto:speakers@ontico.ru">speakers@ontico.ru</a>
-				</div>
+					<div class="footer__elem">
+						<span class="footer__title">Программный комитет :</span>
+						<a href="mailto:speakers@ontico.ru">speakers@ontico.ru</a>
+					</div>
 
-				<div class="footer__elem">
-					<span class="footer__title">Организационный комитет :</span>
-					<a href="mailto:organization@ontico.ru">organization@ontico.ru</a>
-				</div>
+					<div class="footer__elem">
+						<span class="footer__title">Организационный комитет :</span>
+						<a href="mailto:organization@ontico.ru">organization@ontico.ru</a>
+					</div>
 
-				<div class="footer__elem">
-					125040, г.Москва, ул.Нижняя, д.14, стр.7, под.1, эт.2, офис 08, ООО
-					«Конференции Олега Бунина»
+					<div class="footer__elem">
+						125040, г.Москва, ул.Нижняя, д.14, стр.7, под.1, эт.2, офис 08, ООО
+						«Конференции Олега Бунина»
+					</div>
 				</div>
+				<img class="footer__year-img" src="images/year.svg" alt="year-logo" />
 			</div>
-			<img class="footer__year-img" src="images/year.svg" alt="year-logo" />
 		</div>
+
 		<div class="footer__calendar">
 
 		<div class="footer__calendar-year">2022 год:</div>
@@ -46,7 +49,7 @@ export default {
 	data() {
 		return {
 			footerMonths: [
-				"Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
+				"январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"
 			]
 		}
 	},
@@ -59,7 +62,6 @@ export default {
 		background-color: #262529;
 		color: #fff;
 		font-family: TTTravels, Arial, Helvetica, sans-serif;
-		padding: 15px;
 	}
 
 	.footer__title {
@@ -89,17 +91,23 @@ export default {
 	}
 
 	.footer__year-img {
+		margin-bottom: 24px;
 		max-width: 100%;
 	}
 
 	.footer__calendar {
+		background-color: #414141;
+		opacity: .85;
+		border-top: 1px solid #fff;
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-around;
+		justify-content: center;
+		width: 100%;
+		padding: 0 24px 24px;
 	}
 
 	.footer__calendar-year {
-		font-weight: bold;
+		font-weight: bolder;
 		font-size: 36px;
 		line-height: 43px;
 	}
@@ -108,11 +116,13 @@ export default {
 		display: flex;
 		flex-direction: row;
 		list-style: none;
+		font-weight: bold;
+		font-family: TTTravels, Arial, Helvetica, sans-serif;
 	}
 
 	.footer__month {
 		padding-top: 15px;
-		border-top: 1px solid #fff;
+		margin-left: 12px;
 		position: relative;
 	}
 
