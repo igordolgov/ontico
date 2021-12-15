@@ -49,7 +49,7 @@
                 :key="index"
                 class="calendar__item-inner"
               >
-                <div class="calendar__item-information">
+                <a :href="item.uri" class="calendar__item-information">
                   <h3 class="calendar__item-date">{{ item.date_range }}</h3>
                   <img
                     class="calendar__item-logo"
@@ -58,18 +58,15 @@
                   />
                   <h5 class="calendar__item-title">{{ item.name }}</h5>
                   <p class="calendar__item-text">{{ item.brief }}</p>
-                </div>
+                </a>
 
                 <div class="calendar__item-links">
-                  <a class="calendar__item-adress" href="#">{{
-                    item.location
-                  }}</a>
-                  <a class="calendar__item-link" :href="item.uri">{{
-                    item.uri
-                  }}</a>
-
-                  <a class="calendar__item-purchase" href="#">Купить билет</a>
-                  <a class="calendar__item-more" href="#">Подробнее</a>
+                  <a class="calendar__item-adress" href="#">{{ item.location }}</a>
+                  <a class="calendar__item-link" :href="item.uri">{{ item.uri }}</a>
+                  <div class="calendar__item-buttons">
+                    <a class="calendar__item-purchase" href="#">Купить билет</a>
+                    <a class="calendar__item-more" href="#">Подробнее</a>
+                  </div>
                 </div>
               </div>
             </div>
